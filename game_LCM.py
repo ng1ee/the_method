@@ -10,10 +10,8 @@ def find_lcm(a, b, c):
 
 
 def brain_lcm():
-    print("Welcome to the Brain Games!")
-    name = input("May I have your name? ")
-    print(f"Hello, {name}!")
-    print("Find the smallest common multiple of given numbers.")
+    name = input("Welcome to the Brain Games!\nMay I have your name? ")
+    print(f"Hello, {name}!\nFind the smallest common multiple of given numbers.")
 
     correct_answers = 0
     questions_count = 3  # Количество вопросов в игре

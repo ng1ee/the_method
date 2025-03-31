@@ -24,10 +24,8 @@ def generate_geometric_progression():
 
 
 def brain_progression():
-    print("Welcome to the Brain Games!")
-    name = input("May I have your name? ")
-    print(f"Hello, {name}!")
-    print("What number is missing in the progression?")
+    name = input("Welcome to the Brain Games!\nMay I have your name? ")
+    print(f"Hello, {name}!\nWhat number is missing in the progression?")
 
     correct_answers_needed = 3
     correct_answers = 0
