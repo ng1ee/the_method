@@ -1,6 +1,5 @@
 import random
-import math
-from game_Engine import *
+from game_Engine import check_answer
 
 
 def generate_geometric_progression():

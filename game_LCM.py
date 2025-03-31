@@ -1,6 +1,6 @@
 import math
 import random
-from game_Engine import *
+from game_Engine import check_answer
 
 def find_lcm(a, b, c):
     # Функция для нахождения НОК трёх чисел
