@@ -1,6 +1,6 @@
 import math
 import random
-
+from game_Engine import *
 
 def find_lcm(a, b, c):
     # Функция для нахождения НОК трёх чисел
@@ -27,24 +27,11 @@ def brain_lcm():
         print(f"Question: {num1} {num2} {num3}")
         user_answer = input("Your answer: ")
 
-        try:
-            user_answer = int(user_answer)
-        except ValueError:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {name}!")
+        if not check_answer(user_answer, correct_answer, name):
             return
+        correct_answers = correct_answers + 1
 
-        if user_answer == correct_answer:
-            print("Correct!")
-            correct_answers += 1
-        else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {name}!")
-            return
-
-    if correct_answers == questions_count:
         print(f"Congratulations, {name}!")
-
 
 if __name__ == "__main__":
     brain_lcm()

@@ -1,5 +1,6 @@
 import random
 import math
+from game_Engine import *
 
 
 def generate_geometric_progression():
@@ -35,23 +36,10 @@ def brain_progression():
         print(f"Question: {question}")
         user_answer = input("Your answer: ")
 
-        try:
-            user_answer = int(user_answer)
-        except ValueError:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {name}!")
+        if not check_answer(user_answer, correct_answer, name):
             return
-
-        if user_answer == correct_answer:
-            print("Correct!")
-            correct_answers += 1
-        else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {name}!")
-            return
-
+        correct_answers = correct_answers + 1
     print(f"Congratulations, {name}!")
-
 
 if __name__ == "__main__":
     brain_progression()
